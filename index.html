@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Jekyll v4.1.1">
+    <title>Template</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/cover/">
+
+    <!-- Bootstrap core CSS -->
+<link rel="stylesheet" href="/static/bootstrap.min.css" >
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+    <!-- Custom styles for this template -->
+    <link rel="stylesheet" href="/static/cover.css" >
+  </head>
+
+  <body class="text-center">
+    <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+  <header class="masthead mb-auto"></header>
+
+  <main role="main" class="inner cover">
+    <h1 class="cover-heading">CPU Temperature</h1>
+    <div class="lead" id='show'> Or something</div>
+    <p class="lead">Main thing what sometimes good to know!</p>
+  </main>
+
+  <footer class="mastfoot mt-auto"><div class="inner"></div></footer>
+</div>
+ <script src='/socket.io/socket.io.js'></script>
+ <script> 
+   const socket = io();
+   socket.on('showTemp', function(msg){
+      document.getElementById('show').innerHTML = msg;
+   });
+ </script>
+</body>
+</html>

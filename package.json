@@ -1,0 +1,22 @@
+{
+  "name": "homework",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "",
+    "start": "node ./anim/app.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^4.5.3",
+    "ejs": "^3.1.5",
+    "express": "^4.17.1",
+    "osx-temperature-sensor": "^1.0.7",
+    "socket.io": "^3.0.4",
+    "socket.io-client": "^3.0.4",
+    "systeminformation": "^4.30.11"
+  }
+}
